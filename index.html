@@ -11,6 +11,8 @@
 <body>
     <div class="password-container">
         <h2>Random Password Generator</h2>
+        <h3>Choose the lenght: <output id="rangevalue">8</output></h3>
+        <input type="range" min="5" max="12" value="8" class="slider" oninput="rangevalue.value=value">
         <div class="input-container">
           <input 
             type="text" 

@@ -2,6 +2,8 @@ const $btn = document.querySelector('.btn');
 const $input = document.getElementById('input');
 const $copyIcon = document.querySelector('.fa-copy');
 const $alertContainer = document.querySelector('.alert-container');
+const $slider = document.querySelector('.slider');
+const $sliderOutput = document.querySelector('.output');
 
 $btn.addEventListener('click', () => {
     createPassword();
@@ -16,12 +18,11 @@ $copyIcon.addEventListener('click', ()=> {
       $alertContainer.classList.add('active')
       }, 2000);  
     }
-    
 })
 
 function createPassword(){
     const chars = "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const passwordLength = 14;
+    const passwordLength = $slider.value;
     let password = "";
     for (let i = 0; i < passwordLength; i++) {
         const randomNum = Math.floor(Math.random() * chars.length);
